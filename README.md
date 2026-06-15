@@ -3,6 +3,9 @@
 ## AIM:
 To Implement RSA Encryption Algorithm in Cryptography
 
+### Name: Manickam Subbu
+### Reg No: 212223060147
+
 ## Algorithm:
 
 
@@ -36,11 +39,48 @@ Step 5: **Security Foundation
 The security of RSA relies on the difficulty of factoring large numbers; thus, choosing sufficiently large prime numbers for \( p \) and \( q \) is crucial for security.
 
 ## Program:
+```
+
+p = 61
+q = 53
+
+n = p * q
+phi = (p - 1) * (q - 1)
+
+e = 17
+d = 2753
+
+message = input("Enter plaintext: ")
+
+encrypted = []
+
+for ch in message:
+    encrypted.append(pow(ord(ch), e, n))
+
+print("Encrypted Message:", encrypted)
+
+decrypted = ""
+
+for num in encrypted:
+    decrypted += chr(pow(num, d, n))
+
+print("Decrypted Message:", decrypted)
+
+print("Program executed successfully")
+```
 
 
 
 
 ## Output:
+
+
+<img width="1919" height="806" alt="Screenshot 2026-06-09 210424" src="https://github.com/user-attachments/assets/ea8235b7-3f8b-4b39-9db6-6f61555c04a6" />
+
+
+
+
+
 
 
 
